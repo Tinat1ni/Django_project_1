@@ -1,0 +1,36 @@
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+<link rel="stylesheet" href="{% static 'bootstrap.min.css'%}">
+<link rel="stylesheet" href="{% static 'style.css'%}">
+
+{% include 'partials/header.html' %}
+{% include 'partials/spinner.html' %}
+{% include 'partials/navbar.html' %}
+{% include 'partials/modal_search_start.html' %}
+
+{% block except_index %}
+   {% include 'partials/single_page_header.html' %}
+{% endblock %}
+</head>
+<body>
+{% block content %}
+
+{% endblock %}
+
+
+{% include 'partials/footer.html' %}
+{% include 'partials/copyright.html' %}
+{% include 'partials/back_to_top.html' %}
+
+<script src="{% static 'js/main.js' %}"></script>
+
+{% include 'partials/template_javascript.html' %}
+
+</body>
+</html>
