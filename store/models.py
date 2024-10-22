@@ -4,7 +4,7 @@ class Category(models.Model):
     name = models.CharField(max_length=255)
     parent = models.ForeignKey('self', on_delete=models.CASCADE,
                                     related_name='children', blank=True, null=True)
-    slug = models.SlugField(unique=True, default='default-slug')
+    slug = models.SlugField(default='default-slug')
 
     def __str__(self):
         return self.name

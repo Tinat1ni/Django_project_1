@@ -14,5 +14,5 @@ def product_detail(request, slug):
     return render(request, 'shop_detail.html', {'product': product})
 
 def contact(request):
-    return render(request, 'cntact.html')
+    return render(request, 'contact.html')
 
